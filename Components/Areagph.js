@@ -14,7 +14,7 @@ function Areagph() {
         <View style={{ marginVertical: 40, marginHorizontal: 20 }}>
             <AreaChart
                 showGrid={true}
-                style={{ height: 200 }}
+                style={{ height: 500 }}
                 data={data}
                 contentInset={{ top: 30, bottom: 30 }}
                 curve={shape.curveNatural}

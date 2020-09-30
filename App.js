@@ -11,25 +11,13 @@ export default class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      graph: <View><Newbar /></View>,
+      graph: "Bar Chart",
     };
   }
 
-  Bar = () => {
+  Graph = (type) => {
     this.setState({
-      graph: <View><Newbar /></View>,
-    });
-  }
-
-  Line = () => {
-    this.setState({
-      graph: <View><Linegraph /></View>,
-    });
-  }
-
-  Area = () => {
-    this.setState({
-      graph: <View><Areagph /></View>,
+      graph: type,
     });
   }
 
@@ -39,17 +27,20 @@ export default class App extends React.PureComponent {
       <View >
         <View style={{ flexDirection: 'row', marginHorizontal: 28, marginTop: 10 }}>
           <View style={{ marginHorizontal: 10 }}>
-            <Button title={"Bar chart"} style={{ marginLeft: 10 }} color='#63b6d6' onPress={this.Bar} />
+            <Button title={"Bar chart"} style={{ marginLeft: 10 }} color='#63b6d6' onPress={() => this.Graph("Bar Chart")} />
           </View>
           <View style={{ marginHorizontal: 10 }}>
-            <Button title={"Area chart"} style={{ marginLeft: 10 }} color='#63b6d6' onPress={this.Area} />
+            <Button title={"Area chart"} style={{ marginLeft: 10 }} color='#63b6d6' onPress={() => this.Graph("Area Chart")} />
           </View>
           <View style={{ marginHorizontal: 10 }}>
-            <Button title={"Line chart"} style={{ marginLeft: 10 }} color='#63b6d6' onPress={this.Line} />
+            <Button title={"Line chart"} style={{ marginLeft: 10 }} color='#63b6d6' onPress={() => this.Graph("Line Chart")} />
           </View>
         </View>
         <View>
-          {this.state.graph}
+          {/* <Newbar /> */}
+          {this.state.graph === "Bar Chart" && <Newbar />}
+          {this.state.graph === "Area Chart" && <Areagph />}
+          {this.state.graph === "Line Chart" && <Linegraph />}
         </View>
 
 

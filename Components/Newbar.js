@@ -51,7 +51,7 @@ class Newbar extends React.PureComponent {
                 <View style={{ height: 700, padding: 20, marginHorizontal: 2 }}>
                     <BarChart
                         style={{ flex: 1, justifycontent: 'center', marginTop: 60 }}
-                        spacingInner={0.2}
+                        spacingInner={0.3}
                         data={data}
                         svg={{ fill: 'url(#gradient0)' }}
                         yAccessor={({ item }) => item.number}

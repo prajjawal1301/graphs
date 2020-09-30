@@ -11,7 +11,7 @@ class Linegraph extends React.PureComponent {
         return (
             <View style={{ marginVertical: 40, marginHorizontal: 20 }}>
                 <LineChart
-                    style={{ height: 200 }}
+                    style={{ height: 600 }}
                     data={data}
                     svg={{ stroke: '#63b6d6' }}
                     contentInset={{ top: 20, bottom: 20 }}
